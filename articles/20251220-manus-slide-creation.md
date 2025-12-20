@@ -46,13 +46,11 @@ Manusだと、デザインはそのまんまで内容だけ別のスライドが
 
 ## Vintage Tracker
 
-![Vintage Tracker ロゴ](/images/vintage_tracker_logo.png)
-
 現在個人で開発・運営している古着屋を探すためのモバイルアプリです。
 全国各地の古着屋を地図で検索できます。
 
-- 🌐 [Webサイト (Website)](https://vintage-tracker-web.vercel.app/)
+https://vintage-tracker-web.vercel.app/
 
-- 📖 [Vintage Tracker とは？ (About)](https://vintage-tracker-web.vercel.app/about)
+https://apps.apple.com/jp/app/vintage-tracker-%E5%8F%A4%E7%9D%80%E5%B1%8B%E3%83%9E%E3%83%83%E3%83%97/id6447299193
 
-- 📱 [App Store](https://apps.apple.com/jp/app/vintage-tracker-%E5%8F%A4%E7%9D%80%E5%B1%8B%E3%83%9E%E3%83%83%E3%83%97/id6447299193) / [Google Play](https://play.google.com/store/apps/details?id=com.noriaki.vintage_tracker&pcampaignid=web_share)
+https://play.google.com/store/apps/details?id=com.noriaki.vintage_tracker&pcampaignid=web_share
