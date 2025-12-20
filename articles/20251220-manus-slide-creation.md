@@ -28,37 +28,11 @@ Manusだと、デザインはそのまんまで内容だけ別のスライドが
 
 ### 1回目の依頼：Vintage Tracker 2026
 
-![スライド1](/images/manus-slide-creation/vintage-tracker-2026.pptx_page-0001.jpg)
-
-![スライド2](/images/manus-slide-creation/vintage-tracker-2026.pptx_page-0002.jpg)
-
-![スライド3](/images/manus-slide-creation/vintage-tracker-2026.pptx_page-0003.jpg)
-
-![スライド4](/images/manus-slide-creation/vintage-tracker-2026.pptx_page-0004.jpg)
-
-![スライド5](/images/manus-slide-creation/vintage-tracker-2026.pptx_page-0005.jpg)
-
-![スライド6](/images/manus-slide-creation/vintage-tracker-2026.pptx_page-0006.jpg)
+@[speakerdeck](6767f9158b594e288044a991fb7181c2)
 
 ### 2回目の依頼：Vintage Tracker Public API（1回目の出力を添付）
 
-![スライド1](/images/manus-slide-creation/vintage-tracker-public-api.pptx_page-0001.jpg)
-
-![スライド2](/images/manus-slide-creation/vintage-tracker-public-api.pptx_page-0002.jpg)
-
-![スライド3](/images/manus-slide-creation/vintage-tracker-public-api.pptx_page-0003.jpg)
-
-![スライド4](/images/manus-slide-creation/vintage-tracker-public-api.pptx_page-0004.jpg)
-
-![スライド5](/images/manus-slide-creation/vintage-tracker-public-api.pptx_page-0005.jpg)
-
-![スライド6](/images/manus-slide-creation/vintage-tracker-public-api.pptx_page-0006.jpg)
-
-![スライド7](/images/manus-slide-creation/vintage-tracker-public-api.pptx_page-0007.jpg)
-
-![スライド8](/images/manus-slide-creation/vintage-tracker-public-api.pptx_page-0008.jpg)
-
-![スライド9](/images/manus-slide-creation/vintage-tracker-public-api.pptx_page-0009.jpg)
+@[speakerdeck](559ec2f770984e76ae221328a0bfacd7)
 
 ## まとめ
 
