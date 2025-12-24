@@ -4,6 +4,7 @@ emoji: "📊"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["Manus", "AI"]
 published: true
+publication_name: "vintagetracker"
 ---
 
 個人開発アプリ「Vintage Tracker」の今後の展開について外部向けに展開するスライドを作成していました。
