@@ -237,5 +237,4 @@ Riverpod 3.0とFreezed 3.0への移行は、主に以下の変更が必要でし
 
 - [Riverpod 3.0 Migration Guide](https://riverpod.dev/docs/migration/from_state_notifier)
 - [Freezed 3.0 Documentation](https://pub.dev/packages/freezed)
-- [Flutter 3.0 Breaking Changes](https://docs.flutter.dev/release/breaking-changes)
 
