@@ -211,34 +211,6 @@ grep -r "@freezed" lib/models --include="*.dart" -A 2
 # 各ファイルで class → sealed class に変更
 ```
 
-## 移行手順
-
-1. **依存関係の更新**
-   ```yaml
-   dependencies:
-     hooks_riverpod: ^3.1.0
-     riverpod: ^3.1.0
-     freezed: ^3.2.3
-     freezed_annotation: ^3.1.0
-   ```
-
-2. **コード生成の実行**
-   ```bash
-   flutter pub get
-   flutter pub run build_runner build --delete-conflicting-outputs
-   ```
-
-3. **エラーの修正**
-   - `StateNotifier` → `Notifier`/`AsyncNotifier`への置き換え
-   - `@freezed`クラスを`sealed class`に変更
-   - その他の非推奨APIの修正
-
-4. **テストの実行**
-   ```bash
-   flutter analyze
-   flutter test
-   ```
-
 ## 注意点
 
 1. **build_runnerの実行**
@@ -258,9 +230,6 @@ Riverpod 3.0とFreezed 3.0への移行は、主に以下の変更が必要でし
 
 - `StateNotifier` → `Notifier`/`AsyncNotifier`への置き換え
 - 全ての`@freezed`クラスを`sealed class`に変更
-- `withOpacity` → `withValues`への置き換え
-- `super parameter`の使用
-- その他の非推奨APIの修正
 
 これらの変更により、より型安全で保守性の高いコードになりました。移行作業は大変でしたが、新しいAPIの恩恵を受けることができました。
 
