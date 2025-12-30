@@ -211,45 +211,6 @@ grep -r "@freezed" lib/models --include="*.dart" -A 2
 # 各ファイルで class → sealed class に変更
 ```
 
-### 3. その他の修正
-
-#### 3.1 withOpacity → withValuesへの置き換え
-
-Flutter 3.xでは、`Color.withOpacity()`が非推奨となり、`withValues(alpha: value)`を使用する必要があります。
-
-**Before**
-```dart
-color: AppColors.grey.withOpacity(0.7)
-```
-
-**After**
-```dart
-color: AppColors.grey.withValues(alpha: 0.7)
-```
-
-#### 3.2 super parameterの使用
-
-Dart 3.0では、コンストラクタパラメータを`super`パラメータとして使用できます。
-
-**Before**
-```dart
-class RegisterAreaDialog extends ConsumerWidget {
-  RegisterAreaDialog({Key? key}) : super(key: key);
-}
-```
-
-**After**
-```dart
-class RegisterAreaDialog extends ConsumerWidget {
-  RegisterAreaDialog({super.key});
-}
-```
-
-#### 3.3 非推奨APIの修正
-
-- `DropdownButtonFormField`の`value`プロパティを`initialValue`に変更
-- `Markdown`ウィジェットの`imageBuilder`を`sizedImageBuilder`に変更（ただし、型の問題で`imageBuilder`を使用し続ける場合もあり）
-
 ## 移行手順
 
 1. **依存関係の更新**
