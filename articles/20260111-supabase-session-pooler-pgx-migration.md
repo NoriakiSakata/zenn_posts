@@ -2,8 +2,9 @@
 title: "Supabase Session Pooler対応：pgxへの移行とSQL固定化による安定化"
 emoji: "🐘"
 type: "tech"
-topics: ["go", "postgresql", "supabase", "pgx", "session-pooler"]
+topics: ["go", "postgresql", "supabase", "pgx"]
 published: true
+publication_name: "vintagetracker"
 ---
 
 ## はじめに
