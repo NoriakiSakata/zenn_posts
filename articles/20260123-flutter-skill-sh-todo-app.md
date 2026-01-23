@@ -1,5 +1,5 @@
 ---
-title: "Flutterの初期設計、Skills.shに任せてみた🤖"
+title: "Flutterの初期設計、VercelのSkills.shに任せてみた🤖"
 emoji: "🚀"
 type: "tech"
 topics: ["flutter", "riverpod", "freezed", "gorouter", "skills"]
