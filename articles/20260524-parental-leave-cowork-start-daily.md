@@ -225,8 +225,7 @@ Cowork のスキル機能は、SKILL.md という Markdown ファイルに「こ
 
 自分が使っている SKILL.md をそのまま置いておきます。ファイルパスは各自の環境に合わせて書き換えてください。
 
-<details>
-<summary>start-daily SKILL.md（クリックで展開）</summary>
+:::details start-daily SKILL.md（クリックで展開）
 
 ```markdown
 # start-daily スキル
@@ -316,7 +315,7 @@ Google Calendar MCP でタイムライン行を時間指定イベント、タス
 - Google Drive MCP が接続されていない場合は子育てセクションに「データ取得不可」と記載
 ```
 
-</details>
+:::
 
 ---
 
