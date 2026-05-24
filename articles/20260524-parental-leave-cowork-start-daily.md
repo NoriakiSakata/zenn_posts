@@ -2,7 +2,7 @@
 title: "育休パパがCoworkで育児×家事×食事を最適化した1ヶ月🍼"
 emoji: "🍼"
 type: "idea"
-topics: ["cowork", "育休", "効率化", "claude", "生活改善"]
+topics: ["cowork", "AI", "MCP", "claude", "Skills"]
 published: true
 ---
 
