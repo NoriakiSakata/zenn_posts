@@ -227,7 +227,7 @@ Cowork のスキル機能は、SKILL.md という Markdown ファイルに「こ
 
 :::details start-daily SKILL.md（クリックで展開）
 
-```markdown
+````markdown
 # start-daily スキル
 
 ## 概要
@@ -313,7 +313,7 @@ Google Calendar MCP でタイムライン行を時間指定イベント、タス
 - ファイルが既存の場合は上書きしない
 - Google Calendar MCP が接続されていない場合はカレンダー登録をスキップ
 - Google Drive MCP が接続されていない場合は子育てセクションに「データ取得不可」と記載
-```
+````
 
 :::
 
