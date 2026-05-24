@@ -26,13 +26,26 @@ published: true
 
 ---
 
+## 使った技術・ツール
+
+| ツール | 用途 |
+|--------|------|
+| [Cowork](https://claude.ai/download) | AIエージェント実行環境・スキル実行 |
+| └ Google Drive MCP | スキルからピヨログデータを取得 |
+| └ Google Calendar MCP | スキルからタイムライン・タスクを自動登録 |
+| Obsidian | デイリーノート・レシピの保存・プレビュー |
+| ピヨログ | 育児記録アプリ |
+| [memiの1か月食費2万円 節約ワンプレートごはん](https://www.amazon.co.jp/dp/4522438907) | 1ヶ月分のレシピの元ネタ |
+
+---
+
 ## Coworkとは
 
 [Cowork](https://claude.ai/download) は、Anthropic が提供する Claude のデスクトップアプリです。
 
 ただのチャットアプリではなく、**スキル**と呼ばれる独自のプロンプトセットを登録できるのが特徴。繰り返し行う作業をスキルとして定義しておくと、`/start-daily` のように呼び出すだけで複雑なタスクを自動実行してくれます。
 
-Google カレンダーや Notion、Google Drive などの外部サービスとも MCP（Model Context Protocol）で連携でき、「AI がいろんなサービスを横断して動いてくれる」感覚が味わえます。
+Google カレンダーや Google Drive などの外部サービスとも **MCP（Model Context Protocol）** で連携できます。CLI や API を直接叩くのではなく、MCP を通じて Claude がサービスを操作してくれるイメージです。`start-daily` スキルでも、ピヨログデータの取得は Google Drive MCP 経由、カレンダー登録は Google Calendar MCP 経由で行っています。
 
 ### なぜ Claude Code ではなく Cowork を選んだか
 
