@@ -223,6 +223,101 @@ Cowork のスキル機能は、SKILL.md という Markdown ファイルに「こ
 
 「不便だな」と思ったら、その日のうちにスキルをアップデートできる柔軟さが、Cowork の好きなところです。
 
+自分が使っている SKILL.md をそのまま置いておきます。ファイルパスは各自の環境に合わせて書き換えてください。
+
+<details>
+<summary>start-daily SKILL.md（クリックで展開）</summary>
+
+```markdown
+# start-daily スキル
+
+## 概要
+毎朝のデイリーノートを作成し、以下を自動で行う：
+1. 3つのソース（デイリータスク・未来メモ・前日引き継ぎ）からタスクを収集
+2. 今日のレシピを自動取得して追記
+3. 前日の子育てサマリー（ピヨログ）を自動取得して追記
+4. 過去1週間のピヨログデータを分析してタイムラインに追記
+5. デイリーノートを保存
+6. Googleカレンダーに反映
+
+## ファイルパス（daily-life 統合ディレクトリ）
+- ルート: `/Users/<username>/Documents/Claude/Projects/daily-life`
+- デイリーノート保存先: `/Users/<username>/Documents/Claude/Projects/daily-life/daily/YYYY-MM-DD.md`
+- デイリータスク: `/Users/<username>/Documents/Claude/Projects/daily-life/daily/デイリータスク.md`
+- 未来メモ: `/Users/<username>/Documents/Claude/Projects/daily-life/daily/未来メモ.md`
+- 前日ノート: `/Users/<username>/Documents/Claude/Projects/daily-life/daily/[昨日の日付].md`
+- レシピ（週別）: `/Users/<username>/Documents/Claude/Projects/daily-life/recipes/week-X/[曜日].md`
+- 仕込みガイド: `/Users/<username>/Documents/Claude/Projects/daily-life/recipes/week-X/prep-guide.md`
+
+## 実行手順
+
+### 1. 日付・曜日を取得
+```bash
+date +%Y-%m-%d        # 今日
+date -v-1d +%Y-%m-%d  # 昨日（macOS）
+date +%A              # 英語曜日
+```
+
+曜日のファイル名マッピング:
+- Monday → monday.md / Tuesday → tuesday.md / Wednesday → wednesday.md
+- Thursday → thursday.md / Friday → friday.md
+- Saturday → saturday.md / Sunday → sunday.md
+
+### 2. 既存ファイルチェック
+今日のデイリーノートが存在する場合は `computer://` リンクを表示して「すでに作成済みです」と伝えて終了。
+
+### 3. タスクを収集（3ソース）
+
+**① デイリータスク**
+`デイリータスク.md` の `## タスク一覧` セクションにある `- [ ]` 行をすべて読み取る。
+
+**② 未来メモ（当日分）**
+`未来メモ.md` を読み込み、`## YYYY-MM-DD`（今日の日付）の見出し配下の項目を取得する。
+取得後、その見出しブロック（見出し行＋項目行）を削除する。
+過去日付（今日より前）のブロックも同様に削除する。
+
+**③ 前日の引き継ぎ**
+昨日のデイリーノートが存在する場合、`## ➡️ 翌日への引き継ぎ` セクションの行のうち、空行・`- ` のみの行を除いた項目を取得する。
+
+### 4. 今日のレシピを取得
+
+レシピは月曜始まりの週サイクルで管理。前日ノートから週番号を読み取り、月曜日なら+1、火〜日曜はそのまま使う。week-1〜week-5の5週サイクルで折り返す。
+
+`recipes/week-X/[今日の曜日].md` を読み込み、献立名サマリーと詳細レシピを展開する。
+
+### 5. 子育てサマリーを取得（前日分 ＋ 過去1週間分）
+
+Google Drive MCP で「ピヨログ」フォルダを検索し、前日分および過去7日分のファイルを取得する。
+
+前日分から抽出する項目：母乳・授乳回数・ミルク・搾母乳・おむつ替え回数（夫/妻別）・お風呂
+
+過去7日分で週平均を算出し、↑↓→で比較表示する。
+
+### 6. 授乳・おむつスケジュール生成 → タイムラインに追記
+
+前日の最後の授乳時刻から2〜3時間おきに24時間分のスケジュールを生成してタイムラインに追記する。沐浴は前日実績の時刻、なければ19:00を目安とする。
+
+### 7. デイリーノートを作成・保存
+
+タスク・レシピ・子育てサマリー・タイムラインを1つのMarkdownファイルにまとめて保存する。
+
+### 8. Googleカレンダーへ自動反映
+
+Google Calendar MCP でタイムライン行を時間指定イベント、タスクを終日イベントとして登録する。
+
+### 9. 完了メッセージ
+
+`computer://` リンクで今日のデイリーノートを表示し、反映内容を簡潔に伝える。
+
+## 注意事項
+- 日付・曜日は必ず動的に取得する（ハードコードしない）
+- ファイルが既存の場合は上書きしない
+- Google Calendar MCP が接続されていない場合はカレンダー登録をスキップ
+- Google Drive MCP が接続されていない場合は子育てセクションに「データ取得不可」と記載
+```
+
+</details>
+
 ---
 
 ## 育休中だからこそ刺さった
@@ -250,6 +345,8 @@ Cowork のスキル機能は、SKILL.md という Markdown ファイルに「こ
 ## 個人開発アプリの紹介
 
 育休中も細々と開発・運営を続けていた個人アプリです。古着屋を探せるモバイルアプリを作っています。よければ使ってみてください！
+
+![Vintage Tracker](/images/vintage_tracker_logo.png)
 
 - 🌐 [Webサイト](https://web.vintagetracker.app/)
 - 📱 [App Store](https://apps.apple.com/jp/app/vintage-tracker-%E5%8F%A4%E7%9D%80%E5%B1%8B%E3%83%9E%E3%83%83%E3%83%97/id6447299193)
